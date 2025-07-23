@@ -13,7 +13,7 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew'
 import EditIcon from '@mui/icons-material/Edit';
 import TrackingGrid from '../AllProducts/TrackingGrid';
 import ProdMetaAttribute from './ProdCommon'; 
-import Vehicletable from '../AllProducts/vehicletable';
+import Vehicletable from '../AllProducts/Vehicletable';
 import ProductAlternate from '../AllProducts/ProductAltAcc';
 import ProductMetaBlock from '../AllProducts/ProductMetaBlock';
 import ProductAssetMgmnt from '../AllProducts/ProductAssetMgmnt';
