@@ -3,6 +3,7 @@ import { Box } from '@mui/material';
 import CommonProductStatistic from '../CommonComponents/CommonProductStatistic';
 
 const AllProductsDetails = () => {
+  // edit handlers
   const handleEdit1 = () => console.log('Edit section 1');
   const handleEdit2 = () => console.log('Edit section 2');
   const handleEdit3 = () => console.log('Edit section 3');
@@ -12,7 +13,7 @@ const AllProductsDetails = () => {
   const handleEdit7 = () => console.log('Edit section 7');
   const handleEdit8 = () => console.log('Edit section 8');
 
-
+// product data of Images
   const products = [
     { label: 'Dual', image: '/assets/Dual.png' },
     { label: 'Hands free', image: '/assets/Handsfree.png' },
@@ -25,6 +26,7 @@ const AllProductsDetails = () => {
     { label: 'L10', image: '/assets/Scanlock.png' },
   ];
 
+  //product accessories data
   const productsacc = [
     { label: 'Dual', image: '/assets/dual2.png' },
     { label: 'Hands free', image: '/assets/core-r2.png' },
@@ -37,7 +39,7 @@ const AllProductsDetails = () => {
 
   return (
     <Box sx={{ p: 2 }}>
-
+{/* rendering different components through reusable component  CommonProductStatistic*/}
       <CommonProductStatistic
         iconSrc="/assets/Prodcustbaseicon.png"
         title="Product Base Properties"

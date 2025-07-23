@@ -1,53 +1,45 @@
 import React from 'react';
-import { Box, Typography, Card, CardContent, Grid, Avatar, IconButton, Tooltip } from '@mui/material';
+import { Box } from '@mui/material';
 
-import Sidebar from '../components/Sidebar';
-import TopNavbar from "../components/TopNavbar";
-import AllProductsDetails from '../components/AllProducts/AllProductsDetails';
+import Sidebar from '../components/Sidebar'; // Sidebar navigation
+import TopNavbar from "../components/TopNavbar"; // Top navigation bar
+import AllProductsDetails from '../components/AllProducts/AllProductsDetails'; // Main content component
 
 const Inventory = () => {
   return (
-  <Box
-  sx={{
-    display: 'flex',
-width: '100vw',
-height: '100vh', // full screen height
-overflow: 'hidden',
-overflowY: 'auto',
+    <Box
+      sx={{
+        display: 'flex', // Flex layout for sidebar and main content
+        width: '100vw',
+        height: '100vh',
+        overflow: 'hidden',
+        overflowY: 'auto', // Enables vertical scrolling
+        backgroundImage: 'linear-gradient(to bottom, #0E0D2A 90%, #33a7a3ff)',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '100% 100%',
+        backgroundColor: '#0E0D2A',
 
-backgroundImage: 'linear-gradient(to bottom, #0E0D2A 90%, #33a7a3ff)',
-backgroundRepeat: 'no-repeat',
-backgroundSize: '100% 100%',
-backgroundColor: '#0E0D2A', // fallback base
+        // Custom scrollbar styles
+        '&::-webkit-scrollbar': { width: '6px' },
+        '&::-webkit-scrollbar-track': { background: 'transparent' },
+        '&::-webkit-scrollbar-thumb': {
+          backgroundColor: 'rgba(255, 255, 255, 0.2)',
+          borderRadius: '8px',
+        },
+        '&::-webkit-scrollbar-thumb:hover': {
+          backgroundColor: 'rgba(255, 255, 255, 0.4)',
+        },
+        scrollbarWidth: 'thin',
+        scrollbarColor: 'rgba(255,255,255,0.2) transparent',
+      }}
+    >
+      <Sidebar /> {/* Left sidebar */}
 
-'&::-webkit-scrollbar': {
-  width: '6px',
-},
-'&::-webkit-scrollbar-track': {
-  background: 'transparent',
-},
-'&::-webkit-scrollbar-thumb': {
-  backgroundColor: 'rgba(255, 255, 255, 0.2)',
-  borderRadius: '8px',
-},
-'&::-webkit-scrollbar-thumb:hover': {
-  backgroundColor: 'rgba(255, 255, 255, 0.4)',
-},
-
-scrollbarWidth: 'thin', // Firefox
-scrollbarColor: 'rgba(255,255,255,0.2) transparent',
-  }}
->
-  <Sidebar />
-
-  <Box sx={{ flexGrow: 1 }}>
-    <TopNavbar />
-    
-    {/* Page content */}
-    <AllProductsDetails/>
-    
-  </Box>
-</Box>
+      <Box sx={{ flexGrow: 1 }}>
+        <TopNavbar /> {/* Top navbar */}
+        <AllProductsDetails /> {/* Main content area */}
+      </Box>
+    </Box>
   );
 };
 
